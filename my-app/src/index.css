@@ -8,12 +8,11 @@
 
 .container {
   display: grid;
-  grid-template-columns: 2fr 5fr;
   grid-template-areas: 
-  "hd hd"
-  "tt tt"
-  "bb bb"
-  "ft ft";
+  "hd"
+  "tt"
+  "bb"
+  "ft";
 }
 
 .header {
@@ -29,21 +28,51 @@
 .top{
   grid-area: tt;
   min-height: 200px;
-  margin-left: 50px;
+  width: 80%;
+  margin: auto;
   margin-top: 50px;
-  border: 1px solid #eee;
+  /* border: 1px solid #eee; */
   border-radius: 10px;
-  padding: 20px;
-
 }
 
 .bot{
   grid-area: rr;
   min-height: 200px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 100px;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+justify-content: space-between;
+padding-top: 50px;
+gap: 30px;
+margin-bottom: 50px;
+}
+
+.food{
+  width: 350px;
+  height: auto;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+.food-image img{
+  width: 100%;
+  height: auto;
+}
+
+.food-time {
+  padding: 5px 5px;
+  border-radius: 5px;
+  background-color: #ffe0eb;
+  font-size: 12px;
+  color: #ff5a91;
+}
+
+.food-content {
+  padding: 15px 20px;
+}
+
+.food-title{
+  margin-bottom: 20px;
 }
 
 .footer{
@@ -205,4 +234,60 @@
 
 .logo2{
   width: 50px;
+}
+
+
+.profile-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+}
+
+.profile-content {
+  display: flex;
+  align-items: center;
+}
+
+.profile-image {
+  width: 30%;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+  background-color: pink;
+}
+
+.profile-text {
+  font-size: 20px;
+  color: #7a818c;
+}
+
+.profile-actions {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.subscribers {
+  color: #e91e63;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.share-btn {
+  background: #e91e63;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.share-btn:hover {
+  background: #d81b60;
+}
+
+.profile-text p{
+  padding-bottom: 20px;
 }
